@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.user-pic-left {
+  width: 150px;
+  height: 150px;
+  border-radius: 2%;
+  object-fit: cover;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  /* height: calc(100% - 6rem); */
+  width: 300px;
+  background-color: #ffffff;
+  /* border-right: 1px solid #dee2e6; */
+  padding-top: 5px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.nav-link {
+  color: #000000;
+  font-weight: 500;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: 300px;
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

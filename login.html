@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS-Login Page</title>
+   
+     <!-- FavIcon Links  -->
+     <link rel="apple-touch-icon" sizes="180x180" href="favPack/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="favPack/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="favPack/favicon-16x16.png">
+     <link rel="manifest" href="favPack/site.webmanifest">
+     <link rel="mask-icon" href="favPack/safari-pinned-tab.svg" color="#5bbad5">
+     <meta name="msapplication-TileColor" content="#da532c">
+     <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap and JS CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- CSS FILE LINK -->
+     <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body class="bg-white" style="font-family: 'Poppins', sans-serif;">
+    <div class="container">
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-white">
+            <a class="navbar-brand" href="index.html">
+                <img src="./Assets/itpreneur-logo.png" width="250" height="auto" class="d-inline-block align-top" alt="iTpreneur Logo">
+            </a>
+            <div class="d-flex">
+                <button class="btn btn-dark me-2" style="width: 120px;">Login</button>
+                <button class="btn btn-dark" style="width: 120px;" onclick= "window.location.href = 'signup.html'">Sign Up</button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Demo Session</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="mt-5 mb-5">
+        <div class="container rounded border shadow">
+            <div class="row">
+                <!-- left side image -->
+                <div class="col-md-5">
+                    <img src="./Assets/Mobile-login.jpg" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Heading -->
+                    <div>
+                        <h1 class="text-center fw-bolder mt-5 mb-5">iTpreneur Learning Management</h1>
+                    </div>
+
+    <!-- Login Form -->
+
+         <!--E-mail field -->
+                     <form action="">
+                    <div class="col-md-12">
+                        <div class="mb-1 input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" id="e1" aria-describedby="emailHelp" placeholder="Enter Your E-mail">
+                        </div>
+                        <span id="usernameError" class="text-danger mb-5"></span>
+                    </div>
+
+                    <div class="row mt-3">
+                        <!-- Password field -->
+                        <div class="col-md-6">
+                            <div class="mb-3 input-group col-3">
+                                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                <input type="password" id="password" class="form-control" placeholder="Enter Your Password">
+                                <span class="input-group-text" id="password-toggle"><i class="bi bi-eye"></i></span><br>
+                                <span id="passwordError" class="text-danger"></span><br>
+                            </div>
+                        </div>
+
+                        <!-- Role field -->
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group flex-nowrap">
+
+                                <!-- <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span> -->
+
+                                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-people"></i></span>
+                                <select class="form-select" id="role" aria-label="Default select example" >
+                                    <option value="" disabled selected>Select Your Role</option>
+                                    <option value="student">Student</option>
+                                    <option value="trainer">Trainer</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <span id="roleError" class="text-danger"></span>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="col-md-7 mb-3 form-check container ms-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe"><strong>Remember me</strong></label><br>
+                            <span id="rememberMeError" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-3">
+                            <a href="forget.html" class="text-danger text-decoration-none" id="forgot"><strong>Forgot Password?</strong></a>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-danger mt-3 d-grid col-12" id="login" value="Register" >Login</button>
+                        <!-- onclick= "window.location.href = 'userProfile.html'" -->
+
+                        <!-- Signup -->
+                        <div class="text-center mt-3 mb-3">Do not have an account?<a href="signup.html" class="text-danger" id="signup"><strong> Signup</strong></a></div>
+                        <hr>
+
+                        <!-- Terms & condition content -->
+                        <div class="text-center mt-3 mb-5">By signing up <span class="text-danger"><a href="" class="text-decoration-none text-danger">Term & Condition</a>, <a href="" class="text-decoration-none text-danger">Privacy Policy</a></span></div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-success text-light w-100 py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span>Copyright@2024 iTpreneur</span>
+            </div>
+            <div>
+                <a href="#" class="text-light text-decoration-none me-3">Terms & Conditions</a>
+                <a href="#" class="text-light text-decoration-none">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

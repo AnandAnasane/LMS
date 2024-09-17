@@ -1,0 +1,17 @@
+ #signup {
+     text-decoration: none;
+ }
+
+ .form-control,
+ .form-select {
+     border-left: none;
+ }
+
+ .input-group-text {
+     background: none;
+ }
+
+ .form-control::placeholder {
+     color: black;
+     opacity: 1;
+ }

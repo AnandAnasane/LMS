@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITP - LMS | User Profile</title>
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- FavIcon Links  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favPack/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favPack/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favPack/favicon-16x16.png" />
+    <link rel="manifest" href="favPack/site.webmanifest" />
+    <link rel="mask-icon" href="favPack/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Bootstrap CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts CDN Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/scrollbar-styles.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/basic_info.css" />
+    <link rel="stylesheet" href="./css/personal_details.css" />
+    <link rel="stylesheet" href="./css/qualification.css" />
+    <link rel="stylesheet" href="./css/employment_details.css" />
+    <link rel="stylesheet" href="./css/change_password.css" />
+    <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+
+<body class="bg-white" style="font-family: 'Poppins', sans-serif">
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-white navbar-expand-md">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./Assets/itpreneur-logo.png" width="250" height="auto" class="d-inline-block align-top"
+                    alt="iTpreneur Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <button class="btn btn-dark text-white me-2" style="width: 120px;"
+                        onclick="window.location.href = 'login.html'">Login</button>
+                    <button class="btn btn-dark text-white me-2" style="width: 120px;"
+                        onclick="window.location.href = 'signup.html'">Sign Up</button>
+                    <button class="btn btn-dark text-white me-2" style="width: 120px;"><i
+                            class="fas fa-sign-out-alt me-2"></i> Logout</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-0">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Demo Session</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Announcements</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="sidebar">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="" alt="User Picture" class="user-pic-left bg-secondary" id="imagePreview2">
+            </div>
+            <div class="text-center">
+                <h5 class="mt-1 mb-1 fw-bold">
+                    SHOEB PATHAN
+                </h5>
+            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" data-target="profile">
+                        <i class="fas fa-user me-2"></i>
+                        Profile Information
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-target="training">
+                        <i class="fas fa-chalkboard-teacher me-2"></i>
+                        Training
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#testsCollapse" role="button"
+                        aria-expanded="false" aria-controls="testsCollapse">
+                        <i class="fas fa-clipboard-list me-2"></i>
+                        Test | Assignments | Mock
+                    </a>
+                    <div class="collapse" id="testsCollapse">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" data-target="test"><i class="fa fa-arrow-right me-2"></i>Test</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-target="assignments"><i
+                                        class="fa fa-arrow-right me-2"></i>Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-target="mock"><i class="fa fa-arrow-right me-2"></i>Mock</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-target="progress">
+                        <i class="fas fa-bars-progress me-2"></i>
+                        Progress Report
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#placementCollapse" role="button"
+                        aria-expanded="false" aria-controls="placementCollapse">
+                        <i class="fas fa-briefcase me-2"></i>
+                        Placement
+                    </a>
+                    <div class="collapse" id="placementCollapse">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" data-target="joblist"><i class="fa fa-arrow-right me-2"></i>Job
+                                    List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-target="jobapplication"><i
+                                        class="fa fa-arrow-right me-2"></i>Job Application</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <main class="content">
+            <div id="profile" class="tab-content">
+                <h1>Profile Information</h1>
+                <!-- <p>This is the profile information content.</p> -->
+                <hr>
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="basic-info-tab" data-bs-toggle="tab" href="#basic-info">Basic
+                            Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="personal-details-tab" data-bs-toggle="tab"
+                            href="#personal-details">Personal Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="qualification-tab" data-bs-toggle="tab"
+                            href="#qualification">Qualification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="employment-details-tab" data-bs-toggle="tab"
+                            href="#employment-details">Employment Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="change-password-tab" data-bs-toggle="tab" href="#change-password">Change
+                            Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="certifications-tab" data-bs-toggle="tab"
+                            href="#certifications">Certifications</a>
+                    </li>
+                </ul>
+
+                <!-- Profile Information Start Here -->
+
+                <div class="tab-pane fade show active" id="basic-info">
+
+                    <!-- Form-Basic Information name Done -->
+                    <form id="basicInfoForm" onsubmit="return validateForm()">
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">First Name<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="firstName" name="first_name" />
+                                            <div class="text-danger mb-3" id="firstNameError"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="middleName" class="form-label">Middle Name</label>
+                                            <input type="text" class="form-control mb-3" id="middleName" name=" " />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">Last Name<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="lastName" name="last_name" />
+                                            <div class="text-danger mb-3" id="lastNameError"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="email" name="email" />
+                                            <div class="text-danger mb-3" id="emailError"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">Phone<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" />
+                                            <div class="text-danger mb-3" id="phoneError"></div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="alternatePhone" class="form-label">Alternate Phone</label>
+                                            <input type="tel" class="form-control mb-3" id="alternatePhone"
+                                                name="alternate_phone" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="branchName" class="form-label">ITP Branch Name<span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select" id="branchName" name="itp_branch_name">
+                                                <option selected disabled>Select Branch</option>
+                                                <option value="nagpur">Nagpur</option>
+                                                <option value="pune">Pune</option>
+                                                <option value="kolhapur">Kolhapur</option>
+                                            </select>
+                                            <div class="text-danger" id="branchNameError"></div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="counsellorName" class="form-label">Counsellor Name<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="counsellorName"
+                                                name="counsellor_name" />
+                                            <div class="text-danger mb-3" id="counsellorNameError"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="mode" class="form-label">Mode<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="mode" name=" ">
+                                            <option selected disabled>Select Mode</option>
+                                            <option value="online">Online</option>
+                                            <option value="offline">Offline</option>
+                                        </select>
+                                        <div class="text-danger mb-3" id="modeError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <label class="form-label fw-semibold d-block mt-5 fs-5">Profile Picture</label>
+                                <div class="profile-container">
+                                    <img src="" alt="" class="user-pic-left bg-secondary" id="imagePreview1" />
+                                </div>
+                                <input type="file" id="imageUpload" style="display: none" accept="image/*"
+                                    name="profile_picture" />
+                                <button type="button" class="btn btn-dark mb-3"
+                                    onclick="document.getElementById('imageUpload').click();">
+                                    Upload New Photo
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark mb-3 px-4">Save & Next</button>
+                        <div class="mb-3">
+                            <h6 class="">Your profile is 0% complete</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 0%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    0%
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- personal details Tab content Done by Lalit -->
+                <div class="tab-pane fade" id="personal-details">
+
+                    <!-- personal details Form name Done  -->
+                    <form id="personalDetailsForm">
+                        <!-- Address -->
+                        <div class="row mb-3 mt-3">
+                            <div class="col-md-12">
+                                <label for="address" class="form-label">Address <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="address"
+                                    placeholder="House no., Building, Street, Area" name="address_line_1" />
+                                <div id="addressError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Landmark, City/District, Pincode, State -->
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="landmark" class="form-label">Landmark</label>
+                                <input type="text" class="form-control" id="landmark" placeholder="Landmark" name="" />
+                                <div id="landmarkError" class="error"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="city" class="form-label">City/ District <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="city" placeholder="City/ District"
+                                    name="city" />
+                                <div id="cityError" class="error"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="pincode" class="form-label">Pincode <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="pincode" placeholder="Pincode"
+                                    pattern="\d{6}" title="Pincode must be a 6-digit number" name="pincode" />
+                                <div id="pincodeError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Locality/Town, State -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="locality" class="form-label">Locality, Town</label>
+                                <input type="text" class="form-control" id="locality" placeholder="Locality, Town"
+                                    name="" />
+                                <div id="localityError" class="error"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="state" class="form-label">State <span class="text-danger">*</span></label>
+                                <select id="state" class="form-select" name="state">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">
+                                        Arunachal Pradesh
+                                    </option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Andaman and Nicobar Islands">
+                                        Andaman and Nicobar Islands
+                                    </option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Dadra and Nagar Haveli and Daman and Diu">
+                                        Dadra and Nagar Haveli and Daman and Diu
+                                    </option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Ladakh">Ladakh</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Jammu and Kashmir">
+                                        Jammu and Kashmir
+                                    </option>
+                                    <!-- Add other options here -->
+                                </select>
+                                <div id="stateError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth, Gender -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="dob" class="form-label">Date of Birth <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="dob" name="date_of_birth" />
+                                <div id="dobError" class="error"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                                <select id="gender" class="form-select" name="gender">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div id="genderError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Guardian Name, Guardian Phone, Relation with Guardian -->
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="guardianName" class="form-label">Guardian Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="guardianName" placeholder="Guardian Name"
+                                    name="guardian_name" />
+                                <div id="guardianNameError" class="error"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="guardianPhone" class="form-label">Guardian Phone <span
+                                        class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="guardianPhone" placeholder="Guardian Phone"
+                                    pattern="\d{10}" title="Phone number must be a 10-digit number"
+                                    name="guardian_phone" />
+                                <div id="guardianPhoneError" class="error"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="relationGuardian" class="form-label">Relation with Guardian
+                                    <span class="text-danger">*</span></label>
+                                <select id="relationGuardian" class="form-select" name="relation_with_guardian">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="father">Father</option>
+                                    <option value="mother">Mother</option>
+                                    <option value="brother">Brother</option>
+                                    <option value="friend">Friend</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div id="relationGuardianError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Account ID, GitHub Account ID -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="linkedinId" class="form-label">LinkedIn Account ID
+                                </label>
+                                <input type="text" class="form-control" id="linkedinId"
+                                    placeholder="LinkedIn Account ID" name="linkedin_id" />
+                                <div id="linkedinIdError" class="error"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="githubId" class="form-label">GitHub Account ID
+                                </label>
+                                <input type="text" class="form-control" id="githubId" placeholder="GitHub Account ID"
+                                    name="github_id" />
+                                <div id="githubIdError" class="error"></div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label>Your profile is 20% complete</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 20%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        20%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark mt-3 px-4">
+                            Save & Next
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Qualification Pending from Yashwant  -->
+
+                <!--qualification Tab content -->
+                <div class="tab-pane fade" id="qualification">
+                    <form id="qualificationForm" class="needs-validation" novalidate>
+                        <div class="row mt-3">
+
+                            <!-- First Row -->
+
+                            <!-- Form Name Done -->
+                            <!-- Program Name -->
+                            <div class="col-md-4">
+                                <!-- <h5 class="fw-bold">Program Details</h5> -->
+                                <label for="program" class="form-label">Program Name <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="program" name="program_name" required>
+                                    <option value="">Select Program</option>
+                                    <option value="ITPM">ITPM</option>
+                                    <option value="ITPD">ITPD</option>
+                                    <option value="UPGRADATION">UPGRADATION</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a program.
+                                </div>
+                            </div>
+
+                            <!-- Form Name Added -->
+                            <!-- Admission Date -->
+                            <div class="col-md-4 ">
+                                <label for="admissionDate" class="form-label">Admission Date <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" id="admissionDate" class="form-control" name="admission_date"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Please select an admission date.
+                                </div>
+                            </div>
+
+                            <!-- form name done -->
+                            <!-- Domain Name -->
+                            <div class="col-md-4">
+                                <label for="domainName" class="form-label">Domain Name <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="domainName" name="domain_name" required>
+                                    <option value="">Select Domain</option>
+                                    <option value="">Decided</option>
+                                    <option value="">Full Stack Java</option>
+                                    <option value="">Full Stack Dot Net</option>
+                                    <option value="">MEAN Stack</option>
+                                    <option value="">MERN Stack</option>
+                                    <option value="">Business Analyst + Data Analytics</option>
+                                    <option value="">Software Testing</option>
+                                    <option value="">Python Web Development</option>
+                                    <option value="">Software Development</option>
+                                    <option value="">Embedded C + AOTOSAR</option>
+                                    <option value="">Clinical Research</option>
+                                    <option value="">UI/UX Development</option>
+                                    <option value="">Salesforce</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a domain name.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- First Row End -->
+
+                        <!-- form name done -->
+                        <!-- Second Row Start -->
+                        <div class="row mt-3">
+                            <!-- 10th Percentage/SGPA Range-->
+                            <div class="col-md-4">
+                                <label for="10thPercentage" class="form-label">10<sup>th </sup>Percentage/SGPA
+                                    Range<span class="text-danger">*</span></label>
+                                <select class="form-select" id="10thPercentage" name="tenth_percentage_sgpa" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">Below 50% OR SGPA below 5</option>
+                                    <option value="">Between 50% and 60% OR SGPA between
+                                        5 and 6</option>
+                                    <option value="">Above 60% OR SGPA above 6</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your 10th percentage/SGPA.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available -->
+                            <!-- 10th Percentage/SGPA Actual Percentage -->
+                            <div class="col-md-4">
+                                <label for="10thActualPercentage" class="form-label">10<sup>th </sup> Actual
+                                    Percentage/SGPA <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="10thActualPercentage"
+                                    name="10thActualPercentage" placeholder="Enter the Percentage / SGPA" required>
+                                </input>
+                                <div class="invalid-feedback">
+                                    Please enter your 10th percentage/SGPA.
+                                </div>
+                            </div>
+
+                            <!-- form name done -->
+                            <!-- 10th Passing Year -->
+                            <div class="col-md-4">
+                                <!-- <h5 class="fw-bold">10<sup>th </sup>Details</h5> -->
+                                <label for="10thDetails" class="form-label">10<sup>th </sup>Pass Out Year <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="10thDetails" name="tenth_pass_out_year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <!-- other years -->
+                                    <option value="OTHER">OTHER</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a 10th pass out year.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Row End -->
+
+
+                        <!-- Third Row Start -->
+                        <div class="row mt-3">
+
+                            <!-- form name done -->
+                            <!-- 12th or Diploma -->
+                            <div class="col-md-4">
+                                <!-- <h5 class="fw-bold">12<sup>th </sup>or Diploma?</h5> -->
+                                <label for="12thOrDiploma" class="form-label">12<sup>th </sup>or Diploma?<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="12thOrDiploma" name="12thOrDiploma" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="12th">12th</option>
+                                    <option value="Diploma">Diploma</option>
+                                    <option value="Both">Both</option>
+                                </select>
+
+                                <div class="invalid-feedback">
+                                    Please select whether you passed 12th or have a diploma.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Row End -->
+
+                        <!-- Fourth Row Start -->
+                        <div class="row mt-3">
+
+                            <!-- form name done -->
+                            <!-- 12th Percentage/SGPA Range -->
+                            <div class="col-md-4 ">
+                                <label for="12thPercentage" class="form-label">12 <sup>th </sup>Percentage/ SGPA
+                                    Range<span class="text-danger">*</span></label>
+                                <select class="form-select" id="12thPercentage" name="twelfth_percentage_sgpa" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">Below 50% OR SGPA below 5</option>
+                                    <option value="">Between 50% and 60% OR SGPA
+                                        between
+                                        5 and 6</option>
+                                    <option value="">Above 60% OR SGPA above 6</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your 12th percentage/SGPA.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available in json-->
+                            <!-- 12th Percentage/SGPA Actual Percentage -->
+                            <div class="col-md-4">
+                                <label for="12thActualPercentage" class="form-label">12<sup>th </sup> Actual
+                                    Percentage/SGPA
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="12thActualPercentage"
+                                    name="12thActualPercentage" placeholder="Enter the Percentage / SGPA" required>
+                                </input>
+                                <div class="invalid-feedback">
+                                    Please enter your 12th percentage/SGPA.
+                                </div>
+                            </div>
+
+
+                            <!-- form name done -->
+                            <!-- 12th Details -->
+                            <div class="col-md-4">
+                                <!-- <h5 class="fw-bold">12 <sup>th </sup>Details</h5> -->
+                                <label for="12thDetails" class="form-label">12 <sup>th </sup>Pass Out Year <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="12thDetails" name="twelfth_pass_out_year" required>
+                                    <option value="Select Year">Select Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <!-- other years -->
+                                    <option value="OTHER">OTHER</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a 12th pass out year.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fourth Row End -->
+
+                        <!-- Fifth Row Start -->
+
+                        <!-- form name done -->
+                        <div class="row mt-3">
+                            <!-- Diploma Percentage/CGPA -->
+                            <div class="col-md-4 ">
+                                <label for="diplomaPercentage" class="form-label">Diploma Percentage/CGPA Range<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="diplomaPercentage" name="diploma_percentage_sgpa"
+                                    required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">Below 50% OR CGPA below 5</option>
+                                    <option value="">Between 50% and 60% OR CGPA
+                                        between
+                                        5 and 6</option>
+                                    <option value="">Above 60% OR CGPA above 6</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your diploma percentage/CGPA.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available in json-->
+                            <!-- Diploma Percentage/CGPA Actual Percentage -->
+                            <div class="col-md-4">
+                                <label for="DiplomaPercentage" class="form-label">Diploma Actual Percentage/CGPA
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="DiplomaActualPercentage"
+                                    name="DiplomaActualPercentage" placeholder="Enter the Percentage / CGPA" required>
+                                </input>
+                                <div class="invalid-feedback">
+                                    Please enter your Diploma percentage/CGPA.
+                                </div>
+                            </div>
+
+                            <!-- form name done -->
+                            <!-- Diploma Passou year -->
+                            <div class="col-md-4">
+                                <label for="diplomaDetails" class="form-label">Diploma Pass Out Year <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="diplomaDetails" name="diploma_pass_out_year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <!-- other years -->
+                                    <option value="OTHER">OTHER</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a diploma pass out year.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fifth Row End -->
+
+                        <!-- form name done -->
+                        <!-- Sixth Row Start -->
+                        <div class="row mt-3">
+                            <!-- Graduation -->
+                            <div class="col-md-4">
+                                <label for="graduation" class="form-label">Graduation <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="graduation" name="graduation" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">BTech IT</option>
+                                    <option value="">BTech CS</option>
+                                    <option value="">BTech ENTC</option>
+                                    <option value="">BTech Mech</option>
+                                    <option value="">BTech Automobile</option>
+                                    <option value="">BTech Electrical</option>
+                                    <option value="">BTech Civil</option>
+                                    <option value="">BTech Computer Science</option>
+                                    <option value="">BTech Architect</option>
+                                    <option value="">Bsc Maths</option>
+                                    <option value="">Bsc Physics</option>
+                                    <option value="">Bsc Chemistry</option>
+                                    <option value="">Bsc</option>
+                                    <option value="">Bcom</option>
+                                    <option value="">B-Pharm</option>
+                                    <option value="">BBA</option>
+                                    <option value="">BCA</option>
+                                    <option value="">MCA</option>
+                                    <option value="">OTHER</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your graduation.
+                                </div>
+                            </div>
+
+                            <!-- form name done -->
+                            <!-- Graduation Percentage/CGPA Range-->
+                            <div class="col-md-4 ">
+                                <label for="GraduationPercentage" class="form-label">Graduation Percentage/CGPA
+                                    Range<span class="text-danger">*</span></label>
+                                <select class="form-select" id="GraduationPercentage" name="graduation_percentage_sgpa"
+                                    required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">Below 50% OR CGPA below 5</option>
+                                    <option value="">Between 50% and 60% OR CGPA
+                                        between
+                                        5 and 6</option>
+                                    <option value="">Above 60% OR CGPA above 6</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your Graduation Percentage/CGPA.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available in json-->
+                            <!-- Graduation Percentage/CGPA -->
+                            <div class="col-md-4">
+                                <label for="GraduationPercentage" class="form-label">Graduation Actual
+                                    Percentage/CGPA
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="GraduationPercentage"
+                                    name="GraduationPercentage" placeholder="Enter the Percentage / CGPA" required>
+                                </input>
+                                <div class="invalid-feedback">
+                                    Please enter your Diploma percentage/CGPA.
+                                </div>
+                            </div>
+
+                            <!-- form name done -->
+                            <!-- Graduation Pass Out Year -->
+                            <div class="col-md-4 mt-3">
+                                <label for="graduationYear" class="form-label">Graduation Pass Out Year <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="graduationYear" name="graduation_pass_out_year"
+                                    required>
+                                    <option value="">Select Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <!-- other years -->
+                                    <option value="OTHER">OTHER</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your graduation pass out year.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sixth Row End -->
+
+                        <!-- Seventh Row Start -->
+                        <div class="row mt-3">
+
+                            <!-- form name done -->
+                            <!-- Post Graduation -->
+                            <div class="col-md-4">
+                                <!-- <h5 class="fw-bold">Post Graduation</h5> -->
+                                <label for="postGraduation" class="form-label">Post Graduation</label>
+                                <select class="form-select" id="postGraduation" name="post_graduation" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">MTech</option>
+                                    <option value="">MCA</option>
+                                    <option value="">MSC</option>
+                                    <option value="">CS</option>
+                                    <option value="">MSC (Other)</option>
+                                    <option value="">MBA</option>
+                                    <option value="">OTHER</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your post graduation.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available  -->
+                            <!-- Post Graduation Percentage / CGPA-->
+                            <div class="col-md-4">
+                                <label for="postGraduationPercentage" class="form-label">Post Graduation
+                                    Percentage/CGPA
+                                    Range<span class="text-danger">*</span></label>
+                                <select class="form-select" id="postGraduationPercentage"
+                                    name="postGraduationPercentage" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="">Below 50% OR CGPA below 5</option>
+                                    <option value="">Between 50% and 60% OR CGPA
+                                        between
+                                        5 and 6</option>
+                                    <option value="">Above 60% OR CGPA above 6</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your Post Graduation percentage/CGPA.
+                                </div>
+                            </div>
+
+                            <!-- Azad form name is not available in json-->
+                            <!--Post Graduation Percentage/CGPA -->
+                            <div class="col-md-4">
+                                <label for="PostGraduationPercentage" class="form-label"> Post Graduation Actual
+                                    Percentage/CGPA
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="PostGraduationPercentage"
+                                    name="PostGraduationPercentage" placeholder="Enter the Percentage / CGPA" required>
+                                </input>
+                                <div class="invalid-feedback">
+                                    Please enter your Diploma percentage/CGPA.
+                                </div>
+                            </div>
+
+
+                            <!-- form name done -->
+                            <!-- Post Graduation Pass Out Year -->
+                            <div class="col-md-4">
+                                <label for="postGraduationYear" class="form-label">Post Graduation Pass Out
+                                    Year</label>
+                                <select class="form-select" id="postGraduationYear" name="post_graduation_pass_out_year"
+                                    required>
+                                    <option value="">Select Year</option>
+                                    <option value="2000">2000</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <!-- other years -->
+                                    <option value="OTHER">OTHER</option>
+                                    <!-- Add options as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your post graduation pass out year.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Seventh Row End -->
+
+                        <!-- Eight Row Start -->
+                        <div class="row mt-3">
+
+                            <!-- Form name done -->
+                            <!-- Education Gap -->
+                            <div class="col-md-4 ">
+                                <label for="educationGap" class="form-label">Education Gap <span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="educationGap" name="educational_gap" required>
+                                    <option value="">Select the Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select if there is an education gap.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button  -->
+                        <div class="container text-center mt-4">
+                            <button type="submit" class="btn btn-dark fw-bold">Save and Next</button>
+                        </div>
+
+                        <!-- Completion Bar -->
+                        <div class="container mt-5 mb-5">
+                            <h6 class="fw-bold">Your profile is 50% complete</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
+                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--employment details Tab content Done by Lalit -->
+                <div class="tab-pane fade" id="employment-details">
+
+                    <!-- employment details Form name Done  -->
+                    <form id="employmentForm" class="needs-validation" novalidate action="">
+                        <!-- <h2 class="fw-bold">Employment Details</h2> -->
+                        <!-- first row -->
+                        <div class="row mb-3 mt-3">
+                            <!-- Fresher/Experienced? -->
+                            <div class="col-md-6">
+                                <label for="experience" class="form-label">Fresher/Experienced?<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="experience" name="fresher_experienced" required>
+                                    <option value="" disabled selected>
+                                        Select an option
+                                    </option>
+                                    <option value="fresher">Fresher</option>
+                                    <option value="nonTechnical">
+                                        Non Technical Experience
+                                    </option>
+                                    <option value="technical">Technical Experience</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option.</div>
+                            </div>
+
+                            <!-- Employment Details -->
+                            <div class="col-md-6">
+                                <label for="employmentDetails" class="form-label">Employment Details<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="employmentDetails" name="employment_details"
+                                    placeholder="(e.g. TCS - Developer March 2021 to Dec 2021)" required />
+                                <div class="invalid-feedback">
+                                    Please provide your employment details.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- second row -->
+                        <div class="row mb-3">
+                            <!-- Experience in which Technology -->
+                            <div class="col-md-6">
+                                <label for="technology" class="form-label">Experience in which Technology?<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="technology"
+                                    name="experience_in_which_technology"
+                                    placeholder="(e.g. Java/Dot net/Support/Testing/Bank/Back Offices,etc)" required />
+                                <div class="invalid-feedback">
+                                    Please specify the technology.
+                                </div>
+                            </div>
+
+                            <!-- Last/Current CTC -->
+                            <div class="col-md-6">
+                                <label for="ctc" class="form-label">Last/Current CTC<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="ctc" name="last_current_ctc"
+                                    placeholder="(e.g. 3 LPA)" required />
+                                <div class="invalid-feedback">
+                                    Please provide your last/current CTC.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third row -->
+                        <div class="row mb-3">
+                            <!-- Years of Experience -->
+                            <div class="col-md-6">
+                                <label for="yearsOfExperience" class="form-label">Years of Experience?<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="yearsOfExperience"
+                                    name="years_of_experience" min="0" required />
+                                <div class="invalid-feedback">
+                                    Please enter the number of years of experience.
+                                </div>
+                            </div>
+
+                            <!-- Employment GAP -->
+                            <div class="col-md-6">
+                                <label for="employmentGap" class="form-label">Employment GAP<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="employmentGap" name="employment_gap" required>
+                                    <option value="" disabled selected>
+                                        Select an option
+                                    </option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select if there is an employment gap.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fourth row -->
+                        <div class="row mb-3">
+                            <!-- Current skills you possess -->
+                            <div class="col-md-6">
+                                <label for="skills" class="form-label">Current skills you possess<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="skills" name="skillset" required>
+                                    <option value="" disabled selected>Select skill</option>
+                                    <option value="c">C</option>
+                                    <option value="c++">C++</option>
+                                    <option value="java">Core JAVA</option>
+                                    <option value="advanceJava">
+                                        Advance Java - JSP, Servlet
+                                    </option>
+                                    <option value="dotNet">Dot Net - C#</option>
+                                    <option value="adoDotNet">ADO Dot Net</option>
+                                    <option value="aspDotNet">ASP Dot Net</option>
+                                    <option value="dotNetCore">Dot Net Core</option>
+                                    <option value="dotNetWebAPI">Dot Net Web API</option>
+                                    <option value="react">React</option>
+                                    <option value="angular">Angular</option>
+                                    <option value="ui">UI (HTML, JS, CSS, Bootstrap)</option>
+                                    <option value="sql">SQL</option>
+                                    <option value="dataAnalytics">
+                                        Data Analytics (Power BI, Tableau, Excel, Advance Excel,
+                                        etc)
+                                    </option>
+                                    <option value="mernStack">MERN Stack</option>
+                                    <option value="meanStack">MEAN Stack</option>
+                                    <option value="python">Python</option>
+                                    <option value="django">Django framework</option>
+                                    <option value="businessAnalysis">
+                                        Business Analysis
+                                    </option>
+                                    <option value="dataAnalysis">Data Analysis</option>
+                                    <option value="php">PHP</option>
+                                    <option value="laravel">Laravel</option>
+                                    <option value="wordpress">WordPress</option>
+                                    <option value="clinicalResearch">
+                                        Clinical Research
+                                    </option>
+                                    <option value="embeddedC">Embedded C</option>
+                                    <option value="autosar">AUTOSAR</option>
+                                    <option value="dataStructure">
+                                        Data Structure & Algorithm
+                                    </option>
+                                    <option value="manualTesting">Manual Testing</option>
+                                    <option value="automationTesting">
+                                        Automation Testing
+                                    </option>
+                                    <option value="cloudComputing">Cloud Computing</option>
+                                    <option value="devOps">DevOps</option>
+                                    <option value="dataScience">
+                                        Data Science (e.g. AI, ML, etc)
+                                    </option>
+                                    <option value="iot">IOT</option>
+                                    <option value="salesforce">Salesforce</option>
+                                    <option value="ux">UX</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select at least one skill.
+                                </div>
+                            </div>
+
+                            <!-- Notice Period -->
+                            <div class="col-md-6">
+                                <label for="noticePeriod" class="form-label">Notice Period (if any)<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="noticePeriod" name="notice_period" required>
+                                    <option value="" disabled selected>
+                                        Select notice period
+                                    </option>
+                                    <option value="immediate">Immediate Join</option>
+                                    <option value="15days">15 days</option>
+                                    <option value="1month">1 month</option>
+                                    <option value="1_5month">1.5 months</option>
+                                    <option value="2months">2 months</option>
+                                    <option value="3months">3 months</option>
+                                    <option value="other">OTHER</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your notice period.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fifth row -->
+                        <div class="row">
+                            <!-- Candidate Status -->
+                            <div class="col-md-6">
+                                <label for="candidateStatus" class="form-label">Candidate Status<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="candidateStatus" name="candidate_status" required>
+                                    <option value="" disabled selected>Select status</option>
+                                    <option value="trainingNotStarted">
+                                        Training Not Started
+                                    </option>
+                                    <option value="inTraining">In Training</option>
+                                    <option value="completed80pctTrainingMockPending">
+                                        Completed 80% Training & Final MOCK Pending
+                                    </option>
+                                    <option value="completed80pctTrainingMockCompleted">
+                                        Completed 80% Training & Final MOCK Completed
+                                    </option>
+                                    <option value="completedFullTrainingPlacementTracker">
+                                        Completed Full Training and Now in Placement Tracker
+                                    </option>
+                                    <option value="placed">Placed</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your candidate status.
+                                </div>
+                            </div>
+
+                            <!-- Upload Updated Resume -->
+                            <div class="col-md-6">
+                                <label for="resume" class="form-label">Upload Updated Resume<span
+                                        class="text-danger">*</span></label>
+                                <div class="file-upload-area" id="fileUploadArea">
+                                    <input type="file" class="file-input" id="resume" name="upload_resume"
+                                        accept=".pdf, .doc, .docx" required />
+                                    <div id="fileUploadText">
+                                        Click or Drag and Drop to Upload
+                                    </div>
+                                    <div class="text-muted">Max File Size: 10MB</div>
+                                    <div id="fileUploadError" class="file-upload-error">
+                                        Please upload a valid file.
+                                    </div>
+                                </div>
+                                <div class="btn w-100 mt-2">
+                                    <button type="button" class="btn btn-secondary text-dark fw-bold me-2"
+                                        id="cancelButton">
+                                        Cancel
+                                    </button>
+                                    <button type="button" class="btn btn-dark text-white fw-bold me-2"
+                                        id="uploadButton">
+                                        Upload
+                                    </button>
+                                    <button type="submit" class="btn btn-dark fw-bold me-2">
+                                        Save and Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container mb-5">
+                            <h6 class="fw-bold">Your profile is 60% complete</h6>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    60%
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- change password Tab content -->
+                <div class="tab-pane fade" id="change-password">
+                    <section class="container">
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+
+                                <!-- change password Form Azad will work on -->
+                                <form id="loginForm" class="needs-validation mb-4" novalidate>
+                                    <div class="col-md-12">
+                                        <label for="currentPassword">Current Password</label>
+                                        <input type="password" class="form-control" id="currentPassword"
+                                            placeholder="Enter Current Password" required name="" />
+                                        <div class="text-danger" id="currentPasswordError"></div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label for="newPassword">New Password</label>
+                                        <input type="password" class="form-control" id="newPassword"
+                                            placeholder="Enter New Password" required />
+                                        <div class="text-danger" id="newPasswordError"></div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label for="confirmPassword">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirmPassword"
+                                            placeholder="Re-Enter New Password" required />
+                                        <div class="text-danger" id="confirmPasswordError"></div>
+                                    </div>
+
+                                    <button class="btn btn-dark text-white mt-3 px-5" type="submit">
+                                        Save
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <h6 class="fw-bold">Your profile is 80% complete</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        80%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Profile Information Ends Here -->
+            </div>
+            <div id="training" class="tab-content">
+                <h1>Training</h1>
+                <hr>
+                <!-- <p>This is the training content.</p> -->
+                <!-- Training Content Start -->
+                <div class="col-md-12">
+                    <main>
+                        <section class="mb-4">
+                            <h4 class="fw-bold">Batch Details:</h4>
+                            <p><strong>Batch ID:</strong> 123</p>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                        <span class="fw-bold me-2">Start Date:</span>
+                                        <span id="startDate" class="form-control-plaintext">2024-05-01</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center" style="white-space: nowrap;">
+                                        <span class="fw-bold me-2">End Date:</span>
+                                        <span id="endDate" class="form-control-plaintext">2024-08-30</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <label for="dropdown-toggle"><strong>Batch Name: </strong></label>
+                                <button class="btn btn-dark dropdown-toggle" type="button" id="batchDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Select
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="batchDropdown">
+                                    <li><a class="dropdown-item" href="#"
+                                            data-value="ITPM_2024Aug_MERN_Lalit">ITPM_2024Aug_MERN_Lalit</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            data-value="ITPM_2024Aug_MEAN_AZAD">ITPM_2024Aug_MEAN_AZAD</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            data-value="ITPM_2024Aug_MERN_Lalit">ITPM_2024Aug_MERN_Lalit</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            data-value="ITPM_2024Aug_MEAN_AZAD">ITPM_2024Aug_MEAN_AZAD</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            data-value="ITPM_2024Aug_MERN_Lalit">ITPM_2024Aug_MERN_Lalit</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="mb-4">
+                            <h4 class="fw-bold">Sessions:</h4>
+
+                            <div class="accordion" id="sessionsAccordion">
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Programming Basics
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#sessionsAccordion">
+                                        <div class="accordion-body">
+                                            <p><strong>Trainer Name:</strong> Lalit Patil</p>
+                                            <a href="#" class="btn btn-dark"
+                                                aria-label="Programming Basics Session Link">Session Link</a>
+                                            <a href="#" class="btn btn-dark ms-2"
+                                                aria-label="Programming Basics Recordings">Recordings</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Soft Skills
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#sessionsAccordion">
+                                        <div class="accordion-body">
+                                            <p><strong>Trainer Name:</strong> Lalit Patil</p>
+                                            <a href="#" class="btn btn-dark"
+                                                aria-label="Soft Skills Session Link">Session Link</a>
+                                            <a href="#" class="btn btn-dark ms-2"
+                                                aria-label="Soft Skills Recordings">Recordings</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Aptitude
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#sessionsAccordion">
+                                        <div class="accordion-body">
+                                            <p><strong>Trainer Name:</strong> Lalit Patil</p>
+                                            <a href="#" class="btn btn-dark" aria-label="Aptitude Session Link">Session
+                                                Link</a>
+                                            <a href="#" class="btn btn-dark ms-2"
+                                                aria-label="Aptitude Recordings">Recordings</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Business Analyst
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#sessionsAccordion">
+                                        <div class="accordion-body">
+                                            <p><strong>Trainer Name:</strong> Lalit Patil</p>
+                                            <a href="#" class="btn btn-dark"
+                                                aria-label="Business Analyst Session Link">Session Link</a>
+                                            <a href="#" class="btn btn-dark ms-2"
+                                                aria-label="Business Analyst Recordings">Recordings</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4 class="fw-bold">Batch Status:</h4>
+                            <div class="d-flex flex-wrap mb-4">
+                                <span class="badge bg-success flex-fill text-center mx-1 py-3 fw-normal">Not
+                                    Started</span>
+                                <span
+                                    class="badge bg-success flex-fill text-center mx-1 py-3 fw-normal">Induction</span>
+                                <span class="badge bg-warning flex-fill text-center mx-1 py-3 fw-normal">Core
+                                    Completed</span>
+                                <span class="badge bg-warning flex-fill text-center mx-1 py-3 fw-normal">Advance
+                                    Completed</span>
+                                <span class="badge bg-danger flex-fill text-center mx-1 py-3 fw-normal">Project
+                                    Completed</span>
+                                <span class="badge bg-danger flex-fill text-center mx-1 py-3 fw-normal">Batch
+                                    Completed</span>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center me-3">
+                                    <div class="bg-success" style="width: 10px; height: 10px;"></div>
+                                    <span class="ms-2">Completed</span>
+                                </div>
+                                <div class="d-flex align-items-center me-3">
+                                    <div class="bg-warning" style="width: 10px; height: 10px;"></div>
+                                    <span class="ms-2">In Progress</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-danger" style="width: 10px; height: 10px;"></div>
+                                    <span class="ms-2">Not Completed</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h4 class="fw-bold">Notes:</h4>
+                            <div>
+                                <i class="fa-solid fa-folder fa-3x" style="color: #FFD43B;"></i>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+                <!-- Training Content Ends -->
+            </div>
+            <div id="test" class="tab-content">
+                <h1>Test</h1>
+                <hr>
+                <!-- Test Content Start Here -->
+                <div class="col-md-12">
+                    <!-- Sections -->
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-clipboard-list fa-5x text-primary"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM Aug MERN Test 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>17 Aug
+                                            2024</p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00 hrs
+                                        </p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <button class="btn btn-primary" style="width: 120px;">Start Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-clipboard-list fa-5x text-primary"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Test 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024</p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00 hrs
+                                        </p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <button class="btn btn-primary" style="width: 120px;">Start Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-clipboard-list fa-5x text-primary"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Test 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>31 Aug
+                                            2024</p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00 hrs
+                                        </p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <button class="btn btn-primary" style="width: 120px;">Start Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- test content end -->
+            </div>
+
+            <div id="assignments" class="tab-content">
+                <h1>Assignments</h1>
+                <hr>
+                <!-- Assignment Content Start Here -->
+                <div class="col-md-12">
+                    <!-- Sections -->
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>16 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>30 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second row -->
+
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>16 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>30 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third row -->
+
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>16 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-tasks fa-5x text-success"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG MERN Assignment 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>30 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>9:00 AM - 9:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-question me-2"></i>50 Questions
+                                        </p>
+                                        <p class="card-text mb-0"><i class="fas fa-hourglass-half me-2"></i>12:00 hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Assignment Content Ends Here -->
+            </div>
+            <div id="mock" class="tab-content">
+                <h1>Mock</h1>
+                <hr>
+                <!-- <p>This is the Mock content.</p> -->
+
+                <!-- Mock Content Start Here -->
+
+                <div class="col-md-12">
+                    <!-- Sections -->
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>16 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>30 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second row -->
+
+                    <div class="row mb-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 1</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>16 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 2</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>24 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="text-center py-4 bg-light">
+                                    <i class="fas fa-user-tie fa-5x text-warning"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">ITPM AUG 2024 MERN Mock 3</h5>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="far fa-calendar-alt me-2"></i>30 Aug
+                                            2024
+                                        </p>
+                                        <p class="card-text mb-0"><i class="far fa-clock me-2"></i>1:00 PM - 3:00 PM</p>
+                                    </div>
+                                    <div class="d-flex flex-wrap mb-0">
+                                        <p class="card-text me-3 mb-0"><i class="fas fa-hourglass-half me-2"></i>02:00
+                                            hrs
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" style="width: 120px;">Start Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Content Ends Here -->
+            </div>
+            <div id="progress" class="tab-content">
+                <h1>Progress Report</h1>
+                <p>This is the progress report content.</p>
+            </div>
+            <div id="joblist" class="tab-content">
+                <h1>Job List</h1>
+                <p>This is the job list content.</p>
+            </div>
+            <div id="jobapplication" class="tab-content">
+                <h1>Job Application</h1>
+                <p>This is the job application content.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="./js/basic_info.js"></script>
+    <script src="./js/personal_details.js"></script>
+    <script src="./js/qualification.js"></script>
+    <script src="./js/employment_details.js"></script>
+    <script src="./js/change_password.js"></script>
+    <script src="./js/training.js"></script>
+    <script src="./js/sidebar.js"></script>
+
+
+</body>
+
+</html>

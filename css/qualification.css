@@ -1,0 +1,14 @@
+
+        /* Qualification CSS */
+
+        .invalid-feedback {
+            display: none;
+        }
+        .was-validated .form-control:invalid,
+        .was-validated .form-select:invalid {
+            border-color: #dc3545;
+        }
+        .was-validated .form-control:invalid ~ .invalid-feedback,
+        .was-validated .form-select:invalid ~ .invalid-feedback {
+            display: block;
+        }

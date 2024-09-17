@@ -1,0 +1,36 @@
+/* scrollbar-styles.css */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007d3e;
+  border-radius: 0;
+}
+
+/* -------------------------------------- */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #005a30;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #86c227;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6da820;
+}

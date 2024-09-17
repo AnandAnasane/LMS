@@ -1,0 +1,16 @@
+
+        /* Profile Pic*/
+
+        .user-pic-left, .user-pic-right {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+        
